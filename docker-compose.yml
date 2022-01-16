@@ -1,0 +1,10 @@
+version: "1"
+services:
+  nod_dev_env:
+    build: 
+      dockerfile: Dockerfile.dev
+    container_name: node-container
+    ports:
+      - 3000:3000
+    volumes:
+      - ./:/home/app

@@ -1,0 +1,18 @@
+FROM node:alpine
+
+WORKDIR /app
+
+ENV NEXT_PUBLIC_APP_VERSION=v1.0.0
+
+# ENV PORT 3000
+
+# ENV EXPOSE 3000
+COPY . .
+
+RUN npm ci
+
+VOLUME /app
+# RUN npm i next
+
+# RUN npm run dev
+CMD ["npm", "run", "dev"]
